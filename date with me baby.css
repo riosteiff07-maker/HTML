@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff5fa2,#ff8dc7,#9c27b0);
+}
+
+.container{
+    position:relative;
+    z-index:10;
+    text-align:center;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 35px rgba(255,255,255,.25);
+}
+
+.title{
+    font-size:48px;
+    color:white;
+    text-shadow:0 0 20px hotpink;
+}
+
+.subtitle{
+    color:white;
+    margin-top:10px;
+    font-size:20px;
+}
+
+.photo-box{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:35px 0;
+}
+
+.circle{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    padding:6px;
+    background:linear-gradient(45deg,#ff1493,#ffffff,#ff1493);
+    background-size:300% 300%;
+    animation:glow 5s linear infinite;
+}
+
+.circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+}
+
+@keyframes glow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.question{
+    color:white;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.buttons{
+    position:relative;
+    height:80px;
+}
+
+button{
+    padding:12px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.yes{
+    background:#ff1493;
+    color:white;
+}
+
+.yes:hover{
+    transform:scale(1.1);
+}
+
+.no{
+    position:absolute;
+    left:60%;
+    background:#555;
+    color:white;
+}
+
+.footer{
+    margin-top:30px;
+    color:white;
+    opacity:.9;
+}
+
+/* Hearts */
+
+.heart{
+    position:absolute;
+    animation:fly linear forwards;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:1;
+    }
+}
+
+/* Stars */
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(2);
+    }
+}
